@@ -1,0 +1,520 @@
+$cta: #FF5723
+$link: #10A1AF
+$error: #ED0000
+
+$black_100: #000000
+$black_90: #1A1A1A
+$black_80: #2E2E2E
+$black_70: #454545
+$black_60: #757575
+$black_50: #959595
+$black_40: #B9B9B9
+$black_30: #DFDFDF
+$black_20: #ECECEC
+$black_10: #F5F5F5
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..9001,100..900&family=Rethink+Sans:ital,wght@0,400..800;1,400..800&display=swap')
+
+*
+	padding: 0
+	margin: 0
+	box-sizing: border-box
+	font-family: "Rethink Sans", "Noto sans", sans-serif
+	color: black
+	position: relative
+	word-wrap: break-word
+
+h1
+	font-size: 54px
+	font-weight: 800
+	line-height: 110%
+	letter-spacing: 3px
+	margin-top: 60px
+
+h2
+	font-size: 40px
+	font-weight: 700
+	line-height: 120%
+	letter-spacing: 0.8px
+	margin-bottom: 28px
+
+h3
+	font-size: 28px
+	font-weight: 700
+	line-height: 160%
+	letter-spacing: 1.4px
+	margin-bottom: 28px
+
+h4
+	font-size: 20px
+	font-weight: 300
+	line-height: 160%
+
+h5
+	font-size: 16px
+	font-weight: 500
+	line-height: 120%
+
+a
+	font-size: 20px
+	font-weight: 300
+	line-height: 120%
+	color: $link
+
+
+/* 文章樣式開始 */
+.answer
+	h1
+		font-size: 40px
+		font-weight: 800
+		line-height: 110%
+		letter-spacing: 3px
+		margin-top: 28px
+		margin-bottom: 28px
+
+	h2
+		font-size: 32px
+		font-weight: 700
+		line-height: 120%
+		letter-spacing: 0.8px
+		margin-bottom: 28px
+
+	h3
+		font-size: 28px
+		font-weight: 700
+		line-height: 160%
+		letter-spacing: 1.4px
+		margin-bottom: 28px
+
+	h4
+		font-size: 24px
+		font-weight: 600
+		line-height: 160%
+
+	h5
+		font-size: 18px
+		font-weight: 300
+		line-height: 120%
+
+	h6
+		font-size: 16px
+		font-weight: 300
+		line-height: 120%
+
+	a, p, ul li, ol li
+		font-size: 20px
+		font-weight: 300
+		line-height: 160%
+
+/* 文章樣式結束 */
+
+nav
+	background-color: black
+
+.nav_list
+	max-width: 1440px
+	padding: 10px 64px
+	img
+		display: block
+
+.section
+	max-width: 1440px
+	margin: 80px auto
+
+footer
+	margin: 240px auto 80px
+	h5
+		text-align: center
+		font-weight: 400
+		color: $black_70
+	a
+		font-size: 16px
+		font-weight: 400
+
+// index page ––––––––––––––––––––––––––––––––
+
+.index
+	h1
+		text-align: center
+	h3
+		text-align: center
+		margin-top: 60px
+
+.search-form
+	display: flex
+	justify-content: center
+	flex-wrap: wrap
+	input
+		width: 100%
+		max-width: 300px
+		font-size: 18px
+		padding: 8px 12px
+		border-radius: 4px
+		border: 1px solid #000
+		margin-bottom: 12px
+
+.buttons
+	margin-left: 8px
+	button
+		font-size: 18px
+		padding: 8px 30px
+		background-color: $cta
+		border: none
+		color: white
+		border-radius: 4px
+		cursor: pointer
+
+#reset-btn
+	background-color: $black_90
+
+
+.question_list
+	display: flex
+	flex-wrap: wrap
+	padding: 0 24px
+	.question_card
+		margin: 0 16px 60px
+		text-decoration: none
+		width: 30%
+		&:hover .cover img
+			width: 108%
+			height: 108%
+		&:hover
+			h4
+				color: $link
+	.cover
+		border-radius: 12px
+		width: 100%
+		padding-top: 75%
+		min-height: 140px
+		background-color: $black_30
+		overflow: hidden
+		img
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+			width: 100%
+			height: 100%
+			object-fit: cover
+			transition: all 0.3s
+	h4
+		font-size: 18px
+		font-weight: 600
+		line-height: 120%
+		margin-top: 12px
+		margin-bottom: 8px
+		display: -webkit-box
+		-webkit-line-clamp: 2  /* 設定最多顯示兩行 */
+		-webkit-box-orient: vertical
+		overflow: hidden
+		transition: all 0.3s
+
+@media (max-width: 440px)
+	.index
+		h1
+			font-size: 26px
+		h3
+			font-size: 20px
+	.question_list .question_card
+		width: 100%
+		.cover
+			height: 200px
+
+// answer page ––––––––––––––––––––––––––––––––
+
+.answer_page h1
+	padding-left: 36px
+	border-left: 12px solid #000
+
+.reading_width
+	max-width: 800px
+
+.full_width
+	border-bottom: 1px solid $black_40
+	padding-bottom: 40px
+	.label
+		margin-left: 40px
+
+.article
+	max-width: 1440px
+	padding: 0px 64px
+	margin: 0 auto
+	border-top: 1px solid #000
+
+.label
+	font-weight: 700
+	color: $black_50
+	margin-bottom: 16px
+
+// 資料來源
+.data_source
+	display: flex
+	padding: 0 24px
+	.data_card
+		margin: 0 16px
+		text-decoration: none
+		&:hover .cover img
+			width: 108%
+			height: 108%
+		&:hover
+			h4
+				color: $link
+	.cover
+		border-radius: 12px
+		width: 100%
+		height: 140px
+		background-color: $black_30
+		overflow: hidden
+		img
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+			width: 100%
+			height: 100%
+			object-fit: cover
+			transition: all 0.3s
+	h4
+		font-size: 18px
+		font-weight: 600
+		line-height: 120%
+		margin-top: 12px
+		margin-bottom: 8px
+		display: -webkit-box
+		-webkit-line-clamp: 2  /* 設定最多顯示兩行 */
+		-webkit-box-orient: vertical
+		overflow: hidden
+		transition: all 0.3s
+	h5
+		color: $black_50
+		font-weight: 400
+		line-height: 130%
+		display: -webkit-box
+		-webkit-line-clamp: 4
+		-webkit-box-orient: vertical
+		overflow: hidden
+
+// v2.0 調整開始 –––––––––––––––––––––––––––––
+
+.performance
+	display: flex
+	flex-wrap: wrap
+	justify-content: center
+	margin: 0
+	.data
+		margin-bottom: 20px
+		vertical-align: top
+		h5
+			font-weight: 400
+			margin-right: 8px
+		
+.interactive
+	& > h4
+		font-weight: 600
+	.card
+		display: inline-flex
+		justify-content: center
+		align-items: center
+		flex-wrap: wrap
+		padding: 40px 60px
+		margin-top: 12px
+		border-radius: 20px
+		background-color: $black_10
+		.form-container
+			width: 100%
+			margin-top: 20px
+			.button
+				margin-bottom: 0
+
+@media (max-width: 440px)
+	.performance
+		justify-content: start
+		.data
+			flex: 1
+			margin-bottom: 20px
+			margin-right: 6px
+			a
+				margin-left: 6px
+				margin-right: 6px
+	.interactive
+		h4
+			margin-bottom: 20px
+		.card
+			justify-content: start
+			margin-top: 0px
+			padding: 20px
+			.data
+				flex: 1
+				margin-right: 48px
+				margin-bottom: 9px
+				margin-top: 9px
+			.form-container
+				margin-top: 0
+				textarea
+					min-width: 100%
+
+// v2.0 調整結束 –––––––––––––––––––––––––––––
+
+
+// 文章互動區塊
+.interactive
+	text-align: center
+	margin: 60px auto
+
+.data_list
+	display: flex
+	justify-content: center
+	margin-bottom: 40px
+
+.data
+	display: flex
+	align-items: center
+	margin-right: 40px
+	img
+		display: block
+		margin-right: 8px
+
+.clickable
+	cursor: pointer
+
+.thumb-down
+	transform: rotate(180deg)
+
+.fill
+	position: absolute
+	opacity: 0
+
+.clickable:hover .fill
+	opacity: 1
+
+// 表單
+.form-container
+	display: none
+	textarea
+		width: 100%
+		min-width: 300px
+		max-width: 600px
+		height: 160px
+		min-height: 120px
+		max-height: 360px
+		padding: 8px 12px
+		font-size: 16px
+	.button
+		margin-top: 10px
+		margin-bottom: 80px
+	button
+		font-size: 16px
+		padding: 8px 20px
+		margin: 0 12px
+		cursor: pointer
+	.cancel
+		background-color: #fff
+		border: none
+	.submit
+		background-color: $black_90
+		color: white
+
+.submit_feedback
+	display: none
+	margin-bottom: 80px	
+
+.media_list
+	a
+		margin: 0 10px
+
+// 插入廣告
+.ad_banner
+	text-align: center
+	img
+		display: block
+		margin: 0 auto
+		max-width: 100%
+
+// 閱讀更多
+.ask
+	margin-bottom: 16px
+	& > h4
+		font-weight: 500
+		line-height: 120%
+		margin-bottom: 6px
+		color: $link
+		text-decoration: underline
+		cursor: pointer
+	.data
+		display: inline-flex
+		background-color: $black_20
+		padding: 2px 8px
+		border-radius: 8px
+		h4
+			font-size: 14px
+
+@media (max-width: 440px)
+	h1
+		font-size: 28px
+		line-height: 120%
+		padding-left: 0
+		border: none
+	.answer_page h1
+		font-size: 28px
+		padding-left: 12px
+		border-left-width: 8px
+	.answer h1
+		padding-left: 0
+		border: none
+	h2
+		font-size: 28px
+	h3
+		font-size: 24px
+	.section
+		margin-top: 40px
+		margin-bottom: 40px
+	.nav_list
+		padding: 10px 24px
+	.article
+		padding: 0px 24px
+	.full_width .label
+		margin-left: 0px
+	.data_source
+		flex-wrap: wrap
+		padding: 0
+		h4
+			text-decoration: underline
+			margin-top: 0
+			margin-bottom: 12px
+			font-weight: 400
+		.data_card
+			margin: 0 0 12px
+		.cover
+			height: 200px
+	.data_list
+		flex-wrap: wrap
+	.ask
+		h4
+			font-size: 18px
+		.data
+			margin-bottom: 0px
+	footer
+		margin-top: 120px
+	.mobile_hidden
+		display: none !important
+
+/* 加载指示器 */
+.loading-text span:first-of-type
+	animation: blink1 1s infinite
+
+.loading-text span:last-of-type
+	animation: blink2 1s infinite
+
+@keyframes blink1
+	0%, 33%
+		opacity: 0
+	33%, 100%
+		opacity: 1
+
+@keyframes blink2
+	0%, 66%
+		opacity: 0
+	66%, 100%
+		opacity: 1
+

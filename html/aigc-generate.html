@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Mlytics">
+    <meta name="description" content="待補資料">
+    <meta name="keywords" content="待補資料">
+    <title>Mlytics AI</title>
+    <link rel="stylesheet" href="../css/aigc-generate.css">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+  </head>
+  <body>
+    <nav>
+      <div class="nav_list"><a href="#"><img src="../img/logo.svg" width="auto" height="24px" alt="mlytics"></a>
+        <menu><a href="aigc-generate.html">生成文章</a><a href="aigc-database.html">文章資料庫</a></menu>
+      </div>
+    </nav>
+    <div class="container center">
+      <div class="default">
+        <h2>體驗 AIGC 的互動能力吧！</h2>
+        <div class="generate-group">
+          <div class="input-group">
+            <input class="url-input" type="text" placeholder="eg. https://www.mywebsite.com/post_02468">
+            <button class="paste-btn">貼上</button>
+            <button class="clear-btn"><img src="../img/close_small.svg" width="32px" height="32px" alt="clear"></button>
+            <h5 class="hint-text">請確認您輸入的網址為指定測試網域下可被瀏覽器搜尋的公開閱讀文章</h5>
+          </div>
+          <button class="generate-btn">生成文章<img src="../img/generate.svg" width="26px" height="26px" alt="generate"></button>
+        </div>
+      </div>
+      <div class="generate-result">
+        <h2>選擇主題</h2>
+        <div class="topic-list">
+          <div class="loading-placeholder"></div>
+          <div class="loading-placeholder"></div>
+          <div class="loading-placeholder"></div>
+          <div class="loading-placeholder"></div>
+          <div class="loading-placeholder"></div><a class="topic-link" href="../html/aigc-answer_v2.html">Related Palantir 的軍工背景如何影響其在商業市場的競爭力?<img src="../img/arrow_right_alt.svg" alt="open link"></a><a class="topic-link" href="../html/aigc-answer_v2.html">Palantir 的軍工背景是否影響其在 AI 技術上的創新?<img src="../img/arrow_right_alt.svg" alt="open link"></a><a class="topic-link" href="../html/aigc-answer_v2.html">Palantir 的軍工背景如何影響其客戶的信任度?<img src="../img/arrow_right_alt.svg" alt="open link"></a><a class="topic-link" href="../html/aigc-answer_v2.html">Palantir 的軍工背景是否影響其在政府合約上的競爭優勢?<img src="../img/arrow_right_alt.svg" alt="open link"></a><a class="topic-link" href="../html/aigc-answer_v2.html">Palantir 的軍工背景如何影響其在數據安全性上的實力?<img src="../img/arrow_right_alt.svg" alt="open link"></a>
+        </div>
+        <button class="go-back"><img src="../img/arrow_back.svg" alt="go back"><span>重新輸入網址</span></button>
+      </div>
+    </div>
+    <footer>
+      <h5>Powered by Mlytics AI</h5>
+    </footer>
+    <script src="../js/generate.js"></script>
+  </body>
+</html>

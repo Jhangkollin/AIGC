@@ -1,0 +1,87 @@
+// POC 測試頁面
+.index
+	h1
+		text-align: center
+	h3
+		text-align: center
+		margin-top: 60px
+
+.search-form
+	display: flex
+	justify-content: center
+	flex-wrap: wrap
+	input
+		width: 100%
+		max-width: 300px
+		font-size: 18px
+		padding: 8px 12px
+		border-radius: 4px
+		border: 1px solid #000
+		margin-bottom: 12px
+
+.buttons
+	margin-left: 8px
+	button
+		font-size: 18px
+		padding: 8px 30px
+		background-color: $cta
+		border: none
+		color: white
+		border-radius: 4px
+		cursor: pointer
+
+#reset-btn
+	background-color: $black_90
+
+.question_list
+	display: flex
+	flex-wrap: wrap
+	padding: 0 24px
+	.question_card
+		margin: 0 16px 60px
+		text-decoration: none
+		width: 30%
+		&:hover .cover img
+			width: 108%
+			height: 108%
+		&:hover
+			h4
+				color: $link
+	.cover
+		border-radius: 12px
+		width: 100%
+		padding-top: 75%
+		min-height: 140px
+		background-color: $black_30
+		overflow: hidden
+		img
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+			width: 100%
+			height: 100%
+			object-fit: cover
+			transition: all 0.3s
+	h4
+		font-size: 18px
+		font-weight: 600
+		line-height: 120%
+		margin-top: 12px
+		margin-bottom: 8px
+		display: -webkit-box
+		-webkit-line-clamp: 2  /* 設定最多顯示兩行 */
+		-webkit-box-orient: vertical
+		overflow: hidden
+		transition: all 0.3s
+
+@media (max-width: 440px)
+	.index
+		h1
+			font-size: 26px
+		h3
+			font-size: 20px
+	.question_list .question_card
+		width: 100%
+		.cover
+			height: 200px

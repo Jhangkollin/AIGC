@@ -1,0 +1,93 @@
+// 互動按鈕
+.interactive
+	text-align: center
+	margin: 60px auto
+	& > h4
+		font-weight: 600
+	.card
+		display: inline-flex
+		justify-content: center
+		align-items: center
+		flex-wrap: wrap
+		padding: 40px 60px
+		margin-top: 12px
+		border-radius: 20px
+		gap: 20px 0
+		background-color: rgba($black_10, 0.5)
+
+.data
+	display: flex
+	align-items: center
+	margin-right: 40px
+	img
+		display: block
+		margin-right: 8px
+
+.clickable
+	cursor: pointer
+	h5
+		white-space: nowrap
+
+.thumb-down
+	transform: rotate(180deg)
+
+.fill
+	position: absolute
+	opacity: 0
+
+.clickable:hover .fill
+	opacity: 1
+
+@media (max-width: 440px)
+	.interactive
+		margin-bottom: 20px
+		h4
+			margin-bottom: 20px
+		.card
+			justify-content: start
+			margin-top: 0px
+			padding: 20px
+			.data
+				flex: 1
+				margin-right: 48px
+				margin-bottom: 9px
+				margin-top: 9px
+
+// 問題回報表單
+.form-container
+	display: none
+	width: 100%
+	margin-top: 20px
+	textarea
+		width: 100%
+		min-width: 300px
+		max-width: 600px
+		height: 160px
+		min-height: 120px
+		max-height: 360px
+		padding: 8px 12px
+		font-size: 16px
+	.button
+		margin-top: 10px
+		margin-bottom: 0px
+	button
+		font-size: 16px
+		padding: 8px 20px
+		margin: 0 12px
+		cursor: pointer
+	.cancel
+		background-color: #fff
+		border: none
+	.submit
+		background-color: $black_90
+		color: white
+
+.submit_feedback
+	display: none
+	margin-bottom: 80px	
+
+@media (max-width: 440px)
+	.form-container
+		margin-top: 0
+		textarea
+			min-width: 100%

@@ -1,0 +1,61 @@
+#ai_widget
+	padding: 0
+	top: initial
+	bottom: 100px
+	img
+		width: 60px
+		height: 60px
+	&::after
+		opacity: 0
+	&:hover img
+		transform: scale(1.05) rotate(0deg)
+
+#aigc-also-ask
+	background-color: #EEEEEE
+	box-shadow: 2px 4px 16px #00000036
+	.head
+		margin-bottom: 12px
+	.logo 
+		img
+			width: 30px
+			height: 30px
+		p
+			color: #0032E1
+			font-weight: 500
+	.close
+		width: auto
+		height: 36px
+		padding: 0 12px
+		background-color: #7790E7
+		border-radius: 12px
+		vertical-align: center
+		img
+			width: 40px
+			height: 40px
+			top: -2px
+		&:hover::after
+			opacity: 0
+
+.question-title
+	display: none
+	height: 0
+
+.question-link
+	display: inline-flex
+	border-color: #D9E2F1
+	background-color: #fff
+	border-radius: 12px
+	gap: 0
+	img
+		display: none
+	&:hover
+		border-color: #D9E2F1
+		background-color: #E0E2E4
+	&:hover .question-text
+		color: black
+		border-color: #000
+	&:focus
+		border-color: #0032E1
+		background-color: #0032E1
+	&:focus .question-text
+		color: white

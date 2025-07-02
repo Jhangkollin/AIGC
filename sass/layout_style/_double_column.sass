@@ -1,0 +1,110 @@
+.double_column
+	.reading_width
+		max-width: 960px
+	.article
+		display: flex
+		flex-wrap: wrap
+		gap: 60px
+		& > h1
+			border-left: 0
+			padding-left: 0
+
+.main_column .section:first-of-type
+	margin-top: 0
+
+.side_column .section:first-of-type
+	margin-top: 40px
+
+.main_column
+	max-width: 600px
+	min-width: 300px
+	flex: 2
+
+.side_column
+	max-width: 300px
+	flex: 1
+	gap: 12px
+	.section > h5
+		color: $black_70
+		margin-bottom: 16px
+	.section > h6
+		margin-top: 0
+		margin-bottom: 16px
+		font-size: 14px
+		font-weight: 400
+		display: flex
+		align-items: center
+		img
+			margin-right: 4px
+			opacity: 0.5
+		span
+			color: $black_50
+	.data_source
+		flex-direction: column
+		gap: 12px
+	.data_card
+		max-width: 100%
+		min-width: 100%
+		border: 1px solid $black_30
+		border-radius: 8px
+		padding: 16px
+		&:hover
+			border-color: $black_60
+		h4
+			margin-top: 0
+			margin-bottom: 8px
+			color: $black_60
+			font-size: 16px
+			line-height: 140%
+		h5
+			-webkit-line-clamp: 2
+			color: $black_40
+			font-size: 14px
+	.history_list
+		z-index: 1
+		display: flex
+		flex-direction: column
+		gap: 12px
+		li
+			border-radius: 8px
+			padding: 0
+			background-color: rgba($black_10, 0.3)
+			transition: all 0.3s
+			span
+				display: block
+				margin-left: 28px
+				margin-right: 8px
+				font-size: 16px
+				display: -webkit-box
+				-webkit-line-clamp: 2  /* 設定最多顯示兩行 */
+				-webkit-box-orient: vertical
+				overflow: hidden
+			&::before
+				left: 16px
+			&:hover
+				background-color: $black_10
+		a
+			font-size: 18px
+			line-height: 140%
+			padding: 16px
+			text-decoration: none
+			display: flex
+			img
+				opacity: 0.1
+			&:hover img
+				opacity: 0.5
+
+@media (max-width: 440px)
+	.double_column .article
+		gap: 0
+	.main_column .section:first-of-type
+		margin-top: 40px
+	.side_column
+		flex: 0
+	.side_nav.history_section
+		& > h5:first-of-type
+			font-size: 16px
+			left: 20px
+			width: 100px
+		a
+			background-color: transparent

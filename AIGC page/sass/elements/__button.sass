@@ -1,0 +1,34 @@
+button
+	display: flex
+	align-items: center
+	justify-content: center
+	padding: 16px 12px
+	width: 100%
+	font-size: 16px
+	font-weight: 500
+	line-height: 120%
+	border: 1px solid black
+	border-radius: 2px
+	background-color: white
+	cursor: pointer
+	img
+		width: 16px
+		height: 16px
+		margin-right: 12px
+	&:hover
+		background-color: $black_10
+	&.cta
+		color: white
+		background-color: black
+		&:hover
+			background-color: $black_80
+
+// 單一按鈕齊右，兩顆按鈕左右撐開
+.button-group
+	margin-top: 40px
+	display: flex
+	justify-content: space-between
+	button
+		max-width: 120px
+	.cta:only-child
+		margin-left: auto

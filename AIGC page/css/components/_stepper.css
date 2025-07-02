@@ -1,0 +1,44 @@
+.stepper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+  .stepper .step-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    .stepper .step-wrapper .line {
+      width: 60px;
+      height: 1px;
+      background-color: #000; }
+    .stepper .step-wrapper .circle {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 32px;
+      font-size: 14px;
+      font-weight: bold;
+      margin: 0 8px;
+      border: 1px solid black;
+      background-color: white;
+      color: black; }
+    .stepper .step-wrapper.prev .circle {
+      background-color: #ddd;
+      border-color: transparent;
+      color: white; }
+    .stepper .step-wrapper.current .circle {
+      background-color: black;
+      color: white; }
+    .stepper .step-wrapper.next .circle {
+      background-color: white;
+      border-color: black;
+      color: black; }

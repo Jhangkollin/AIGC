@@ -1,0 +1,417 @@
+$cta: #FF5723
+$cta_hover: #ff430a
+$link: #10A1AF
+$error: #ED0000
+$nav_bg: #fcfcfc
+
+$black_100: #000000
+$black_90: #1A1A1A
+$black_80: #2E2E2E
+$black_70: #454545
+$black_60: #757575
+$black_50: #959595
+$black_40: #B9B9B9
+$black_30: #DFDFDF
+$black_20: #ECECEC
+$black_10: #F5F5F5
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..9001,100..900&family=Rethink+Sans:ital,wght@0,400..800;1,400..800&display=swap')
+
+*
+	padding: 0
+	margin: 0
+	box-sizing: border-box
+	font-family: "Rethink Sans", "Noto sans", sans-serif
+	color: black
+	position: relative
+	word-wrap: break-word
+
+h1
+	font-size: 54px
+	font-weight: 800
+	line-height: 110%
+	letter-spacing: 3px
+	margin-top: 60px
+
+h2
+	font-size: 40px
+	font-weight: 700
+	line-height: 120%
+	letter-spacing: 0.8px
+	margin-bottom: 28px
+
+h3
+	font-size: 28px
+	font-weight: 700
+	line-height: 160%
+	letter-spacing: 1.4px
+	margin-bottom: 28px
+
+h4
+	font-size: 20px
+	font-weight: 300
+	line-height: 160%
+
+h5
+	font-size: 16px
+	font-weight: 500
+	line-height: 120%
+
+a
+	font-size: 20px
+	font-weight: 300
+	line-height: 120%
+	color: $link
+
+@media (max-width: 540px)
+	h1
+		font-size: 30px
+	h2
+		font-size: 26px
+	h3
+		font-size: 24px
+	a
+		font-size: 18px
+
+body
+	display: flex
+	flex-direction: column
+	align-items: center
+	gap: 20px
+	padding-top: 60px
+	min-height: 100vh
+
+nav
+	background-color: $nav_bg
+	border-bottom: 1px solid $black_20
+	position: fixed
+	left: 0
+	top: 0
+	z-index: 99
+	width: 100vw
+
+.nav_list
+	display: flex
+	align-items: center
+	justify-content: space-between
+	max-width: 1440px
+	padding: 10px 64px
+	img
+		display: block
+	menu
+		display: flex
+		gap: 20px
+		a
+			text-decoration: none
+			color: black
+			font-size: 16px
+			font-weight: 400
+			&:hover
+				color: $cta
+
+.container
+	flex: 1
+	width: 100%
+	max-width: 860px
+	padding: 20px
+	display: flex
+
+.container.center
+	flex-direction: column
+	justify-content: center
+
+footer
+	width: 100%
+	display: flex
+	flex-wrap: wrap
+	justify-content: center
+	padding: 20px
+	h5
+		max-width: 700px
+		line-height: 160%
+		color: $black_50
+
+@media (max-width: 540px)
+	.nav_list
+		padding: 10px 24px
+
+// Generate 頁面 ..................................................... 開始
+
+// 初始畫面 ––––––––––––––––––––––––––
+
+h2
+	text-align: center
+	margin-bottom: 40px
+
+.generate-group
+	display: flex
+	justify-content: center
+	gap: 12px
+
+.input-group
+	position: relative
+
+.url-input
+	width: 100%
+	padding: 16px 116px 16px 16px
+	font-size: 18px
+	border: none
+	white-space: nowrap
+	overflow: hidden
+	text-overflow: ellipsis
+	box-shadow: 0 6px 16px 8px rgba($black_20, 0.7) 
+	border-radius: 12px
+	&::placeholder
+		color: $black_30
+
+.paste-btn
+	padding: 4px 8px
+	font-size: 16px
+	color: $black_50
+	background-color: white
+	border: 2px solid $black_20
+	border-radius: 4px
+	cursor: pointer
+	position: absolute
+	right: 12px
+	top: 11px
+	z-index: 1
+	&:hover
+		color: $black_60
+		background-color: $black_10
+		border-color: $black_30
+
+.clear-btn
+	cursor: pointer
+	border: none
+	background-color: white
+	position: absolute
+	top: 11px
+	right: 76px
+	z-index: 1
+	border-right: 1px solid $black_20
+	img
+		opacity: 0.6
+	&:hover img
+		opacity: 1
+
+.generate-btn
+	height: 55px
+	padding: 10px 20px
+	font-size: 18px
+	background-color: $cta
+	color: white
+	border: none
+	border-radius: 4px
+	cursor: pointer
+	display: flex
+	align-items: center
+	gap: 4px
+	&:hover
+		background-color: $cta_hover
+		box-shadow: 0 0 16px rgba(#ffb570, 0.7)
+
+.hint-text
+	color: $black_60
+	font-weight: 400
+	font-size: 16px
+	padding: 8px 76px 8px 16px
+	margin-top: 12px
+
+@media (max-width: 540px)
+	.default h2
+		margin-bottom: 60px
+	.generate-group
+		flex-direction: column
+	.hint-text
+		font-size: 14px
+		padding-right: 16px
+	.generate-btn
+		justify-content: center
+
+// 生成問題畫面 ––––––––––––––––––––––––––
+
+.topic-link
+	display: flex
+	align-items: center
+	justify-content: space-between
+	text-decoration: none
+	color: $black_90
+	padding: 12px
+	font-weight: 400
+	line-height: 160%
+	border-bottom: 1px solid $black_40
+	grid-area: 12px
+	&:hover
+		color: $cta
+
+.go-back
+	display: flex
+	align-items: center
+	gap: 8px
+	margin: 80px auto 40px
+	padding: 14px 20px
+	border-radius: 4px
+	cursor: pointer
+	font-size: 18px
+	border: none
+	background-color: $black_30
+	&:hover
+		background-color: $black_20
+	span
+		color: $black_70
+
+.loading-placeholder
+	height: 36px
+	width: 100%
+	background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%)
+	background-size: 200% 100%
+	animation: shimmer 1.2s infinite
+	border-radius: 4px
+	margin: 20px auto
+	&:last-of-type
+		margin-bottom: 180px
+
+@keyframes shimmer
+	0% 
+		background-position: -200% 0
+	100%
+		background-position: 200% 0
+
+// 顯示／隱藏動畫
+.generate-result
+	display: none
+
+.topic-link,
+.go-back
+	display: none
+	opacity: 0
+	transition: opacity 0.4s ease
+
+.topic-link.show,
+.go-back.show
+	opacity: 1
+
+@media (max-width: 540px)
+	.generate-result h2
+		margin-bottom: 20px
+	.go-back
+		margin-top: 40px
+
+// Generate 頁面 ..................................................... 結束
+// Database 頁面 ..................................................... 開始
+
+.database
+	.container
+		flex-direction: column
+	h2
+		margin: 60px auto 40px
+
+@media (max-width: 540px)
+	.database h2
+		margin-top: 20px
+
+.filter
+	width: 100%
+	display: flex
+	justify-content: end
+	align-items: center
+	margin-bottom: 20px
+	h5
+		color: $black_40
+		margin-right: 4px
+
+// 下拉選單
+.dropdown
+	position: relative
+	width: 200px
+	user-select: none
+
+.dropdown__selected
+	background: white
+	padding: 10px
+	border: 1px solid $black_80
+	border-radius: 4px
+	cursor: pointer
+	position: relative
+	&::after
+		content: "▾"
+		position: absolute
+		right: 10px
+		top: 50%
+		transform: translateY(-50%)
+
+.dropdown__menu
+	list-style: none
+	padding: 0
+	margin: 0
+	box-shadow: 0 12px 20px rgba($black_60, 0.6)
+	border-radius: 4px
+	border-top: none
+	background: white
+	position: absolute
+	width: 100%
+	display: none
+	max-height: 200px
+	overflow-y: auto
+	z-index: 10
+	&.active
+		display: block
+
+.dropdown__item
+	padding: 10px
+	cursor: pointer
+	transition: background 0.2s ease
+	&:hover
+		background: $black_10
+		color: $cta
+	&.active
+		background: $black_70
+		color: white
+
+// 資料列表
+.news_list
+	display: flex
+	justify-content: space-between
+	flex-wrap: wrap
+	gap: 40px 20px
+
+.news
+	flex: 0 0 calc(33.333% - 20px)
+	text-decoration: none
+	h4
+		line-height: 140%
+		font-size: 18px
+		margin-top: 8px
+		display: -webkit-box
+		-webkit-line-clamp: 2
+		-webkit-box-orient: vertical
+		overflow: hidden
+		text-overflow: ellipsis
+	&:hover img
+		width: 105%
+		height: 105%
+	&:hover h4
+		color: $cta
+
+@media (max-width: 540px)
+	.news
+		flex: 100%
+
+.aspect-box
+	position: relative
+	width: 100%
+	border-radius: 12px
+	aspect-ratio: 4 / 3
+	overflow: hidden
+	background: #ccc
+	img
+		transition: all 0.3s
+		position: absolute
+		top: 50%
+		left: 50%
+		object-fit: cover
+		transform: translate(-50%, -50%)
+
+
+// Database 頁面 ..................................................... 結束

@@ -1,0 +1,21 @@
+.interactive
+	h4 你覺得這篇文章有幫助嗎？
+	.card
+		.data.clickable
+			img(src='../img/thumb_up.svg' width='24px' height='24px' alt='like')
+			img.fill(src='../img/thumb_up_click.svg' width='24px' height='24px' alt='like')
+			h5 有幫助
+		.data.clickable
+			img.thumb-down(src='../img/thumb_up.svg' width='24px' height='24px' alt='unlike')
+			img.thumb-down.fill(src='../img/thumb_up_click.svg' width='24px' height='24px' alt='unlike')
+			h5 沒幫助
+		.data.clickable.show_form
+			img(src='../img/flag.svg' width='24px' height='24px' alt='report')
+			img.fill(src='../img/flag_click.svg' width='24px' height='24px' alt='report')
+			h5 回報問題
+		.form-container
+			form
+				textarea(name="feedback" placeholder="Feedback")
+				.button
+					button.cancel(type="button") 取消
+					button.submit(type="submit") 送出

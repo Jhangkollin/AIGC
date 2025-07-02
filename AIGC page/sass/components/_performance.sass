@@ -1,0 +1,33 @@
+// 文章表現數字
+.performance
+	display: flex
+	flex-wrap: wrap
+	justify-content: center
+	margin: 0
+	.data
+		margin-bottom: 20px
+		vertical-align: top
+		h5
+			font-weight: 400
+			margin-right: 8px
+	a img
+		width: 40px
+		height: 40px
+
+@media (max-width: 440px)
+	.performance
+		justify-content: center
+		gap: 6px 10px
+		.data
+			flex: 1
+			margin-right: 10px
+			a
+				margin-left: 6px
+				margin-right: 6px
+		.data:last-of-type
+			flex-wrap: wrap
+			min-width: 100%
+			h5
+				min-width: 100%
+				margin-bottom: 12px
+				margin-left: 8px

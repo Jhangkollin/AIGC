@@ -10,7 +10,6 @@ const ruleMap = {
   special: /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/,
 };
 
-// 即時檢查
 passwordInput.addEventListener('input', () => {
   const pwd = passwordInput.value;
   hintList.forEach((li) => {
@@ -20,7 +19,6 @@ passwordInput.addEventListener('input', () => {
       li.classList.remove('invalid');
     } else {
       li.classList.remove('valid');
-      // 不主動加 invalid，避免干擾使用者輸入時的體驗
     }
   });
 });
@@ -35,7 +33,6 @@ document.getElementById('signupForm').addEventListener('submit', function (e) {
   if (!email || !password) return;
 
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-    // 可以加個紅框提示，不使用 alert
     return;
   }
 
@@ -58,19 +55,16 @@ passwordInput.addEventListener('input', () => {
   hintList.forEach((li) => {
     const rule = li.dataset.rule;
 
-    // 若密碼欄位清空，移除所有 .valid/.invalid 狀態
     if (pwd === "") {
       li.classList.remove('valid', 'invalid');
       return;
     }
 
-    // 即時比對規則
     if (ruleMap[rule]?.test(pwd)) {
       li.classList.add('valid');
       li.classList.remove('invalid');
     } else {
       li.classList.remove('valid');
-      // 保持干淨輸入體驗：不主動加 invalid
     }
   });
 });
@@ -86,7 +80,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const isPassword = passwordInput.type === 'password';
     passwordInput.type = isPassword ? 'text' : 'password';
 
-    // 圖示切換：自行準備對應 SVG 路徑
     toggleIcon.src = isPassword
       ? '../img/onboarding/visibility_off.svg'
       : '../img/onboarding/visibility.svg';

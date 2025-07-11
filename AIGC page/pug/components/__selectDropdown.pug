@@ -1,0 +1,32 @@
+mixin customSelect(id, options, selected)
+	- var selectedLabel = (options.find(o => o.value === selected) || {}).label || 'select'
+	.custom-select(id=id data-selected=selected)
+		.select-trigger(tabindex='0' aria-expanded='false')
+			span.select-label= selectedLabel
+			svg.select-arrow(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24")
+				path(d="M7 10l5 5 5-5z")
+		ul.select-menu
+			each opt in options
+				li(data-value=opt.value)= opt.label
+
+link(rel='stylesheet', href='../css/elements/__selectDropdown.css')
+script(src='../js/components/selectDropdown.js')
+
+//- [下拉選單]
+
+//- copy code –––––––––––––––––––––––––––––––––––––––––––
+
+//- include ./components/__selectDropdown.pug
+//- +customSelect('lang-select', [
+//- 	{value: 'en', label: 'English'},
+//- 	{value: 'zh', label: '中文'}
+//- 	], 'en')
+
+//- –––––––––––––––––––––––––––––––––––––––––––––––––––––
+
+//- How to setup
+//- ('ID', [
+//- 	{value: 'true', label: 'Yes'},
+//- 	{value: 'false', label: 'No'}
+//- 	], 'default')
+

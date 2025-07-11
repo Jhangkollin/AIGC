@@ -1,10 +1,13 @@
 #ai_widget
+	width: 48px
+	height: 48px
 	padding: 0
 	top: initial
-	bottom: 100px
+	right: 8px
+	bottom: 30%
 	img
-		width: 60px
-		height: 60px
+		width: 48px
+		height: 48px
 	&::after
 		opacity: 0
 	&:hover img
@@ -21,24 +24,29 @@
 			height: 30px
 		p
 			color: #0032E1
-			font-weight: 500
+			font-size: 18px
+			font-weight: 700
+			margin: 0
 	.close
-		width: auto
-		height: 36px
+		width: 60px
+		height: 32px
 		padding: 0 12px
 		background-color: #7790E7
 		border-radius: 12px
 		vertical-align: center
 		img
-			width: 40px
-			height: 40px
-			top: -2px
+			width: 32px
+			height: 32px
+			right: -2px
 		&:hover::after
 			opacity: 0
 
 .question-title
 	display: none
 	height: 0
+
+.question-text
+	font-weight: 400
 
 .question-link
 	display: inline-flex

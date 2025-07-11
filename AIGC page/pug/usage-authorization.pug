@@ -1,0 +1,50 @@
+doctype html
+html(lang='en')
+	head
+		include ./components/_meta.pug
+		title Usage Authorization
+		link(rel='stylesheet', href='../css/onboarding.css')
+
+	body
+		include ./onboarding/_navigation.pug
+
+		//- 內容開始 –––––––––––––––––––––––––––––––––––––––––––––––––––
+		
+		.container.usage-authorization
+			.content
+				include ./components/__stepper.pug
+				+stepIndicator(3, 3)
+
+				.canvas
+					h3 Usage Authorization
+					form(id='usageAuthorization')
+						.form-group
+							input(type="checkbox" id="trial-1" name="trial-1" value="yes")
+							.list
+								label(for="trial") Agree to Trial Terms
+								ul
+									li During the trial period, you will receive 1,000,000 tokens free of charge. These tokens can be used to 
+										span.bold generate approximately 4,000 pages (or around 2,000 pages in Chinese).
+									li There is no expiration date for the tokens.
+									li Once the tokens are used up, if you do not subscribe, the service will be immediately terminated, and all data generated during the trial will no longer be accessible.
+						.form-group
+							input(type="checkbox" id="trial-2" name="trial-2" value="yes")
+							.list
+								label(for="trial") Agree to 
+									a(href='#' target='_blank') Data Collection and Usage Terms
+						.form-group
+							input(type="checkbox" id="trial-3" name="trial-3" value="yes") 
+							.list
+								label(for="trial") Agree to 
+									a(href='#' target='_blank') Content Copyright Terms
+
+				.button-group
+					a.button.no-border.full(href='./install-widget.html') Back
+					//- button.fill(type='submit') Next
+					a.button.fill.full#nextBtn(href='./setup-complete.html') Confirm
+
+		//- 內容結束 –––––––––––––––––––––––––––––––––––––––––––––––––––
+
+		include ./onboarding/_footer.pug
+		script(src='../js/onboarding.js')
+

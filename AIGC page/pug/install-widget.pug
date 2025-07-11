@@ -1,0 +1,59 @@
+doctype html
+html(lang='en')
+	head
+		include ./components/_meta.pug
+		title Install AI widget
+		link(rel='stylesheet', href='../css/onboarding.css')
+
+	body
+		include ./onboarding/_navigation.pug
+
+		//- 內容開始 –––––––––––––––––––––––––––––––––––––––––––––––––––
+		
+		.container.install-widget
+			.content
+				include ./components/__stepper.pug
+				+stepIndicator(3, 2)
+
+				.canvas
+					h3 Install AI widget
+
+					h4.bold Recommend
+					h5 Sign in with Google and auto-authorize installation
+					a.button(href='https://accounts.google.com/o/oauth2/v2/auth?client_id=...&redirect_uri=...&response_type=code&scope=...')
+						img(src='../img/onboarding/Google.svg' width='16px' height='16px' alt='google')
+						| Install via Google
+
+					h5.separate_line or
+
+					h4.bold Manual Installation
+					h5 1. Paste this code in the 
+						span.bold &lt;head&gt; 
+						| of page:
+					.ga_code
+						h6#code-box
+							| &lt;script async type="application/javascript" src="https://tag-manager-api.herolifx.com/client-script"&gt;&lt;/script&gt;
+						.buttons
+							.button-msg-set
+								h6.copied-msg Copied
+								img.copy(src='../img/content_copy.svg' width='20px' height='20px' alt='copy')
+							//- 長文展開開關
+							h6#toggle-expand Expand
+
+					h5 2. Click the button to check installation.
+					.button-msg-set
+						button#check-install Check installation 
+						h5.v-text.v-success Install successful
+							span
+								img(src='../img/check.svg' width='24px' height='24px' alt='check')
+						h5.v-text.v-fail Install unsuccessful
+
+				.button-group
+					a.button.no-border.full(href='./setup-website.html') Back
+					a.button.fill.full(href='./usage-authorization.html') Next
+
+		//- 內容結束 –––––––––––––––––––––––––––––––––––––––––––––––––––
+
+		include ./onboarding/_footer.pug
+		script(src='../js/onboarding.js')
+

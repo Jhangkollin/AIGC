@@ -11,6 +11,10 @@ form
 		margin-bottom: 16px
 		&::placeholder
 			color: $black_40
+	.error-message
+		display: none
+		color: $error
+		font-size: 14px
 
 .form-group
 	display: flex
@@ -21,9 +25,6 @@ form
 		margin-right: 8px
 		margin-bottom: 14px
 		white-space: nowrap
-	.suffix
-		margin-bottom: 14px
-		font-weight: 400
 
 .input-wrapper
 	input
@@ -39,5 +40,6 @@ form
 	.form-group
 		flex-wrap: wrap
 		label
+			width: 100%
 			margin-bottom: 0px
 			padding-bottom: 0

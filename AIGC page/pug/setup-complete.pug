@@ -1,0 +1,87 @@
+doctype html
+html(lang='en')
+	head
+		include ./components/_meta.pug
+		title Setup complete
+		link(rel='stylesheet', href='../css/onboarding.css')
+
+	body
+		include ./onboarding/_navigation.pug
+
+		//- 內容開始 –––––––––––––––––––––––––––––––––––––––––––––––––––
+		
+		.container.setup-complete
+			.content
+				.canvas
+				h3 Setup complete! 🎉
+				h5.intro You can now customize your AIGC page by uploading your logo and selecting a template or simply publish your widget to start the experience. 
+				img.cover(src='../img/onboarding/setup_complete.png' width='100%' height='auto' alt='Setup complete')
+				.setup-panel
+					.panel
+						.settings
+							.item
+								label Fav-icon:
+								.button
+									input.upload(type='file' 
+										data-type='upload-favicon'
+										data-preview='preview-favicon'
+										accept='image/*'
+										style='display:none;'
+										onchange='handleFilePreview(this)')
+									button(onclick="triggerUpload('upload-favicon')")
+										| Upload
+										img(src='../img/onboarding/upload.svg' width='24px' height='24px' alt='upload')
+								.preview#preview-favicon
+							.item
+								label Logo:
+								.button
+									input.upload(type='file' 
+										data-type='upload-logo'
+										data-preview='preview-logo'
+										accept='image/*' 
+										style='display:none;'
+										onchange='handleFilePreview(this)')
+									button(onclick="triggerUpload('upload-logo')")
+										| Upload
+										img(src='../img/onboarding/upload.svg' width='24px' height='24px' alt='upload')
+								.preview#preview-logo
+							.item
+								label Layout:
+								.selector
+									.selection(data-index='0').selected
+										| Single column
+										img(src='../img/onboarding/1c.svg' width='18px' height='18px')
+									.selection(data-index='1')
+										| Two columns
+										img(src='../img/onboarding/2c.svg' width='18px' height='18px')
+						.sample-img
+							img(src='../img/onboarding/column-1.png' width='100%' height='auto' alt='Single column')
+							img(src='../img/onboarding/column-2.png' width='100%' height='auto' alt='Double column')
+					.separate_line
+					.panel
+						.settings
+							.item
+								label Widget position:
+								.selector
+									.selection(data-index='0') 
+										| Top right
+										img(src='../img/onboarding/tr.svg' width='18px' height='18px')
+									.selection(data-index='1').selected
+										| Center right
+										img(src='../img/onboarding/cr.svg' width='18px' height='18px')
+									.selection(data-index='2')
+										| Bottom right
+										img(src='../img/onboarding/br.svg' width='18px' height='18px')
+						.sample-img
+							img(src='../img/onboarding/widget-top.png' width='100%' height='auto' alt='widget at top')
+							img(src='../img/onboarding/widget-center.png' width='100%' height='auto' alt='widget at center')
+							img(src='../img/onboarding/widget-bottom.png' width='100%' height='auto' alt='widget at bottom')
+				.button-group
+					button Customize
+					a.button.fill.full.launch(href='./setup-complete.html') Publish now
+
+		//- 內容結束 –––––––––––––––––––––––––––––––––––––––––––––––––––
+
+		include ./onboarding/_footer.pug
+		script(src='../js/onboarding.js')
+

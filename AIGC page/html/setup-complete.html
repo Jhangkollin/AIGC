@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Mlytics">
+    <meta name="description" content="待補資料">
+    <meta name="keywords" content="待補資料">
+    <!-- Open Graph (OG) for Facebook-->
+    <meta property="og:title" content="待補資料">
+    <meta property="og:description" content="待補資料">
+    <meta property="og:image" content="待補資料">
+    <meta property="og:url" content="待補資料">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="待補資料">
+    <meta property="fb:app_id" content="待補資料">
+    <!-- Instagram OG Tags-->
+    <meta property="og:instagram:site" content="待補資料">
+    <meta property="og:instagram:title" content="待補資料">
+    <meta property="og:instagram:description" content="待補資料">
+    <meta property="og:instagram:image" content="待補資料">
+    <!-- Twitter Meta Tags-->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="待補資料">
+    <meta name="twitter:description" content="待補資料">
+    <meta name="twitter:image" content="待補資料">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <title>Setup complete</title>
+    <link rel="stylesheet" href="../css/onboarding.css">
+  </head>
+  <body>
+    <nav><a href=""><img src="../img/Mlytics_AI_logo.svg" width="auto" height="32px" alt="mlytics"></a></nav>
+    <div class="container setup-complete">
+      <div class="content">
+        <div class="canvas"></div>
+        <h3>Setup complete! 🎉</h3>
+        <h5 class="intro">You can now customize your AIGC page by uploading your logo and selecting a template or simply publish your widget to start the experience. </h5><img class="cover" src="../img/onboarding/setup_complete.png" width="100%" height="auto" alt="Setup complete">
+        <div class="setup-panel">
+          <div class="panel">
+            <div class="settings">
+              <div class="item">
+                <label>Fav-icon:</label>
+                <div class="button">
+                  <input class="upload" type="file" data-type="upload-favicon" data-preview="preview-favicon" accept="image/*" style="display:none;" onchange="handleFilePreview(this)">
+                  <button onclick="triggerUpload('upload-favicon')">Upload<img src="../img/onboarding/upload.svg" width="24px" height="24px" alt="upload"></button>
+                </div>
+                <div class="preview" id="preview-favicon"></div>
+              </div>
+              <div class="item">
+                <label>Logo:</label>
+                <div class="button">
+                  <input class="upload" type="file" data-type="upload-logo" data-preview="preview-logo" accept="image/*" style="display:none;" onchange="handleFilePreview(this)">
+                  <button onclick="triggerUpload('upload-logo')">Upload<img src="../img/onboarding/upload.svg" width="24px" height="24px" alt="upload"></button>
+                </div>
+                <div class="preview" id="preview-logo"></div>
+              </div>
+              <div class="item">
+                <label>Layout:</label>
+                <div class="selector">
+                  <div class="selection selected" data-index="0">Single column<img src="../img/onboarding/1c.svg" width="18px" height="18px"></div>
+                  <div class="selection" data-index="1">Two columns<img src="../img/onboarding/2c.svg" width="18px" height="18px"></div>
+                </div>
+              </div>
+            </div>
+            <div class="sample-img"><img src="../img/onboarding/column-1.png" width="100%" height="auto" alt="Single column"><img src="../img/onboarding/column-2.png" width="100%" height="auto" alt="Double column"></div>
+          </div>
+          <div class="separate_line"></div>
+          <div class="panel">
+            <div class="settings">
+              <div class="item">
+                <label>Widget position:</label>
+                <div class="selector">
+                  <div class="selection" data-index="0">
+                     Top right<img src="../img/onboarding/tr.svg" width="18px" height="18px"></div>
+                  <div class="selection selected" data-index="1">Center right<img src="../img/onboarding/cr.svg" width="18px" height="18px"></div>
+                  <div class="selection" data-index="2">Bottom right<img src="../img/onboarding/br.svg" width="18px" height="18px"></div>
+                </div>
+              </div>
+            </div>
+            <div class="sample-img"><img src="../img/onboarding/widget-top.png" width="100%" height="auto" alt="widget at top"><img src="../img/onboarding/widget-center.png" width="100%" height="auto" alt="widget at center"><img src="../img/onboarding/widget-bottom.png" width="100%" height="auto" alt="widget at bottom"></div>
+          </div>
+        </div>
+        <div class="button-group">
+          <button>Customize</button><a class="button fill full launch" href="./setup-complete.html">Publish now</a>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <h5>© 2035 by Mlytics</h5>
+    </footer>
+    <script src="../js/onboarding.js"></script>
+  </body>
+</html>

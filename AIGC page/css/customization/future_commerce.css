@@ -1,10 +1,13 @@
 #ai_widget {
+  width: 48px;
+  height: 48px;
   padding: 0;
   top: initial;
-  bottom: 100px; }
+  right: 8px;
+  bottom: 30%; }
   #ai_widget img {
-    width: 60px;
-    height: 60px; }
+    width: 48px;
+    height: 48px; }
   #ai_widget::after {
     opacity: 0; }
   #ai_widget:hover img {
@@ -23,24 +26,29 @@
     height: 30px; }
   #aigc-also-ask .logo p {
     color: #0032E1;
-    font-weight: 500; }
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0; }
   #aigc-also-ask .close {
-    width: auto;
-    height: 36px;
+    width: 60px;
+    height: 32px;
     padding: 0 12px;
     background-color: #7790E7;
     border-radius: 12px;
     vertical-align: center; }
     #aigc-also-ask .close img {
-      width: 40px;
-      height: 40px;
-      top: -2px; }
+      width: 32px;
+      height: 32px;
+      right: -2px; }
     #aigc-also-ask .close:hover::after {
       opacity: 0; }
 
 .question-title {
   display: none;
   height: 0; }
+
+.question-text {
+  font-weight: 400; }
 
 .question-link {
   display: -webkit-inline-box;

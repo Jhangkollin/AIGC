@@ -134,7 +134,8 @@ body {
     flex-direction: column;
     gap: 8px;
     list-style: none;
-    padding-left: 0; }
+    padding-left: 0;
+    margin: 0; }
 
 #aigc-also-ask.active {
   right: 20px;

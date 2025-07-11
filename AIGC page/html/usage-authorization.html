@@ -27,60 +27,57 @@
     <meta name="twitter:description" content="待補資料">
     <meta name="twitter:image" content="待補資料">
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
-    <title>Setup website</title>
+    <title>Usage Authorization</title>
     <link rel="stylesheet" href="../css/onboarding.css">
   </head>
   <body>
     <nav><a href=""><img src="../img/Mlytics_AI_logo.svg" width="auto" height="32px" alt="mlytics"></a></nav>
-    <div class="container">
+    <div class="container usage-authorization">
       <div class="content">
         <link rel="stylesheet" href="../css/elements/__stepper.css">
         <script src="../js/components/stepper.js"></script>
                 <div class="stepper">
-                  <div class="step-wrapper current">
+                  <div class="step-wrapper prev">
                     <div class="circle">1</div>
                   </div>
-                  <div class="step-wrapper next">
+                  <div class="step-wrapper prev">
                     <div class="line"></div>
                     <div class="circle">2</div>
                   </div>
-                  <div class="step-wrapper next">
+                  <div class="step-wrapper current">
                     <div class="line"></div>
                     <div class="circle">3</div>
                   </div>
                 </div>
         <div class="canvas">
-          <h3>Setup website</h3>
-          <form id="setupForm">
+          <h3>Usage Authorization</h3>
+          <form id="usageAuthorization">
             <div class="form-group">
-              <label for="website">Install website url</label>
-              <input type="text" placeholder="www.your-website.com">
+              <input type="checkbox" id="trial-1" name="trial-1" value="yes">
+              <div class="list">
+                <label for="trial">Agree to Trial Terms</label>
+                <ul>
+                  <li>During the trial period, you will receive 1,000,000 tokens free of charge. These tokens can be used to <span class="bold">generate approximately 4,000 pages (or around 2,000 pages in Chinese).</span></li>
+                  <li>There is no expiration date for the tokens.</li>
+                  <li>Once the tokens are used up, if you do not subscribe, the service will be immediately terminated, and all data generated during the trial will no longer be accessible.</li>
+                </ul>
+              </div>
             </div>
             <div class="form-group">
-              <label for="aigc-url">AIGC page url</label>
-              <input type="text" placeholder="your AI page" attr="answer-page-url" data-url-check>
-              <h5 class="suffix">.mlyticsaigc.com</h5>
+              <input type="checkbox" id="trial-2" name="trial-2" value="yes">
+              <div class="list">
+                <label for="trial">Agree to <a href="#" target="_blank">Data Collection and Usage Terms</a></label>
+              </div>
             </div>
-            <div class="error-message">Only alphanumeric characters and - _ . ~ are allowed.</div>
             <div class="form-group">
-              <label for="response-lang">Response language</label>
-              <link rel="stylesheet" href="../css/elements/__selectDropdown.css">
-              <script src="../js/components/selectDropdown.js"></script>
-                            <div class="custom-select" id="lang-select" data-selected="en">
-                              <div class="select-trigger" tabindex="0" aria-expanded="false"><span class="select-label">English</span>
-                                <svg class="select-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                  <path d="M7 10l5 5 5-5z"></path>
-                                </svg>
-                              </div>
-                              <ul class="select-menu">
-                                <li data-value="en">English</li>
-                                <li data-value="zh">中文</li>
-                              </ul>
-                            </div>
+              <input type="checkbox" id="trial-3" name="trial-3" value="yes">
+              <div class="list">
+                <label for="trial">Agree to <a href="#" target="_blank">Content Copyright Terms</a></label>
+              </div>
             </div>
           </form>
         </div>
-        <div class="button-group"><a class="button fill full" href="./install-widget.html">Next</a></div>
+        <div class="button-group"><a class="button no-border full" href="./install-widget.html">Back</a><a class="button fill full" id="nextBtn" href="./setup-complete.html">Confirm</a></div>
       </div>
     </div>
     <footer>

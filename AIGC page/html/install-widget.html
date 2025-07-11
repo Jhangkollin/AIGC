@@ -27,20 +27,20 @@
     <meta name="twitter:description" content="待補資料">
     <meta name="twitter:image" content="待補資料">
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
-    <title>Setup website</title>
+    <title>Install AI widget</title>
     <link rel="stylesheet" href="../css/onboarding.css">
   </head>
   <body>
     <nav><a href=""><img src="../img/Mlytics_AI_logo.svg" width="auto" height="32px" alt="mlytics"></a></nav>
-    <div class="container">
+    <div class="container install-widget">
       <div class="content">
         <link rel="stylesheet" href="../css/elements/__stepper.css">
         <script src="../js/components/stepper.js"></script>
                 <div class="stepper">
-                  <div class="step-wrapper current">
+                  <div class="step-wrapper prev">
                     <div class="circle">1</div>
                   </div>
-                  <div class="step-wrapper next">
+                  <div class="step-wrapper current">
                     <div class="line"></div>
                     <div class="circle">2</div>
                   </div>
@@ -50,37 +50,29 @@
                   </div>
                 </div>
         <div class="canvas">
-          <h3>Setup website</h3>
-          <form id="setupForm">
-            <div class="form-group">
-              <label for="website">Install website url</label>
-              <input type="text" placeholder="www.your-website.com">
+          <h3>Install AI widget</h3>
+          <h4 class="bold">Recommend</h4>
+          <h5>Sign in with Google and auto-authorize installation</h5><a class="button" href="https://accounts.google.com/o/oauth2/v2/auth?client_id=...&amp;redirect_uri=...&amp;response_type=code&amp;scope=..."><img src="../img/onboarding/Google.svg" width="16px" height="16px" alt="google">Install via Google</a>
+          <h5 class="separate_line">or</h5>
+          <h4 class="bold">Manual Installation</h4>
+          <h5>1. Paste this code in the <span class="bold">&lt;head&gt; </span>of page:</h5>
+          <div class="ga_code">
+            <h6 id="code-box">&lt;script async type="application/javascript" src="https://tag-manager-api.herolifx.com/client-script"&gt;&lt;/script&gt;</h6>
+            <div class="buttons">
+              <div class="button-msg-set">
+                <h6 class="copied-msg">Copied</h6><img class="copy" src="../img/content_copy.svg" width="20px" height="20px" alt="copy">
+              </div>
+              <h6 id="toggle-expand">Expand</h6>
             </div>
-            <div class="form-group">
-              <label for="aigc-url">AIGC page url</label>
-              <input type="text" placeholder="your AI page" attr="answer-page-url" data-url-check>
-              <h5 class="suffix">.mlyticsaigc.com</h5>
-            </div>
-            <div class="error-message">Only alphanumeric characters and - _ . ~ are allowed.</div>
-            <div class="form-group">
-              <label for="response-lang">Response language</label>
-              <link rel="stylesheet" href="../css/elements/__selectDropdown.css">
-              <script src="../js/components/selectDropdown.js"></script>
-                            <div class="custom-select" id="lang-select" data-selected="en">
-                              <div class="select-trigger" tabindex="0" aria-expanded="false"><span class="select-label">English</span>
-                                <svg class="select-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                                  <path d="M7 10l5 5 5-5z"></path>
-                                </svg>
-                              </div>
-                              <ul class="select-menu">
-                                <li data-value="en">English</li>
-                                <li data-value="zh">中文</li>
-                              </ul>
-                            </div>
-            </div>
-          </form>
+          </div>
+          <h5>2. Click the button to check installation.</h5>
+          <div class="button-msg-set">
+            <button id="check-install">Check installation </button>
+            <h5 class="v-text v-success">Install successful<span><img src="../img/check.svg" width="24px" height="24px" alt="check"></span></h5>
+            <h5 class="v-text v-fail">Install unsuccessful</h5>
+          </div>
         </div>
-        <div class="button-group"><a class="button fill full" href="./install-widget.html">Next</a></div>
+        <div class="button-group"><a class="button no-border full" href="./setup-website.html">Back</a><a class="button fill full" href="./usage-authorization.html">Next</a></div>
       </div>
     </div>
     <footer>
